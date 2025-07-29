@@ -1,0 +1,279 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-home {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-home:hover {
+    color: #3498db;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #3498db;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* Home page styles */
+.home-page {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.home-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.home-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.examples {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.examples h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.example-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.example-link {
+    display: block;
+    padding: 1rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.example-link:hover {
+    background: #2980b9;
+}
+
+/* Dice result styles */
+#dice-result {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.dice-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.result-primary {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: inline-block;
+    min-width: 200px;
+}
+
+.results-individual {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.roll {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-width: 60px;
+    display: inline-block;
+}
+
+.sum-label {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Error styles */
+.error-page {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.error-message {
+    background: #e74c3c;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.error-message h2 {
+    margin-bottom: 1rem;
+}
+
+/* Help page styles */
+.help-page {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.help-page h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.help-page h2 {
+    color: #3498db;
+    margin: 2rem 0 1rem 0;
+}
+
+.help-page ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.help-page code {
+    background: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .result-primary {
+        font-size: 3rem;
+        min-width: 150px;
+    }
+    
+    .roll {
+        font-size: 1.5rem;
+        min-width: 50px;
+    }
+    
+    .example-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

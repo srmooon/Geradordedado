@@ -1,0 +1,11 @@
+# Netlify redirects for client-side routing
+# All routes should serve the main index.html for SPA functionality
+
+# Any dice notation pattern (e.g., /1d10, /5d20, /100d1000, etc.)
+/*d* /index.html 200
+
+# Help page
+/help /index.html 200
+
+# Catch-all for any other routes - serve index.html for SPA
+/* /index.html 200
